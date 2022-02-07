@@ -24,9 +24,9 @@
 
             <ul class="links">
 
-                <!-- <li><a href="profil.php">Profil</a></li>-->
+
                 <li><a href="mentionlegale.php">Qui somme-nous?</a></li>
-                <li class="deconnexion"><a href="headerHConnex.php">Log</a></li>
+                <li class="deconnexion"><a href="headerHConnex.php">Login</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
