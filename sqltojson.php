@@ -52,12 +52,27 @@ echo "</pre>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <?php
-    echo "<table id='test'></table>";
+    echo "<table id='test'>
+    <tr><th>Identifiant</th>
+    <th>Ip destination</th>
+    <th>Ip source</th>
+    <th>nom du protocole</th>
+    <th>ports de destination</th>
+    <th>ports de source</th>
+    <th>statut du protocole</th>
+    <th>ttl</th>
+    </table>";
     ?>
 </body>
 <script>
@@ -78,7 +93,11 @@ echo "</pre>";
             "<tr><td>" + element['list_identification'] +
             "</td><td>" + element['list_ip_dest'] +
             "</td><td>" + element['list_ip_from'] +
-            "</td><td>" + element['list_identification'] +
+            "</td><td>" + element['list_protocol_name'] +
+            "</td><td>" + element['list_protocol_ports_dest'] +
+            "</td><td>" + element['list_protocol_ports_from'] +
+            "</td><td>" + element['list_protocol_checksum_status'] +
+            "</td><td>" + element['list_ttl'] +
             "</td></tr>";
     });
 
