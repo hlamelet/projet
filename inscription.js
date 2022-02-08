@@ -18,6 +18,7 @@
         document.querySelector('.Cardcontainer').style.display = "flex";
 
 
+
     });
 
     document.querySelector('.close').addEventListener("click", function() {

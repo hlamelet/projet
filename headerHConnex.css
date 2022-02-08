@@ -203,6 +203,8 @@ button:focus {
     min-height: 480px;
     display: none;
     margin: 100px auto;
+    z-index: 130;
+    transition-duration: 0.3s;
 }
 
 .form-container {
@@ -383,3 +385,25 @@ button:focus {
 
 
 /*---mobile----*/
+
+@media (max-width: 480px) {
+    .Cardcontainer {
+        font-size: small;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .Cardcontainer h1 {
+        font-size: larger;
+    }
+    .Cardcontainer button {
+        width: 30vw;
+        display: flex;
+        justify-content: center;
+    }
+    .Cardcontainer form {
+        padding: 5px;
+    }
+    .overlay-panel {
+        padding: 0;
+    }
+}
