@@ -46,8 +46,10 @@
 
 
 
-
-
+    <div id="load"></div>
+    <div id="contents">
+        jlkjjlkjlkjlkjlklk
+    </div>
 
 
 
