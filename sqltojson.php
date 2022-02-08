@@ -58,15 +58,23 @@ echo "</pre>";
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        th {
+            color: white;
+            background-color: #272643;
+            width: 100px
+        }
     </style>
 </head>
 
 <body>
     <?php
+    echo "<includes('');
     echo "<table id='test'>
     <tr><th>Identifiant</th>
     <th>Ip destination</th>
     <th>Ip source</th>
+    <th>date</th>
     <th>nom du protocole</th>
     <th>ports de destination</th>
     <th>ports de source</th>
@@ -88,11 +96,13 @@ echo "</pre>";
     // })"
 
     jsonJs.forEach(element => {
-        // console.log(element['list_date'])
+        let dateObject = new Date(element['list_date'] * 1000)
+        let readableDate = dateObject.toLocaleString()
         document.getElementById('test').innerHTML +=
             "<tr><td>" + element['list_identification'] +
             "</td><td>" + element['list_ip_dest'] +
             "</td><td>" + element['list_ip_from'] +
+            "</td><td>" + readableDate +
             "</td><td>" + element['list_protocol_name'] +
             "</td><td>" + element['list_protocol_ports_dest'] +
             "</td><td>" + element['list_protocol_ports_from'] +
