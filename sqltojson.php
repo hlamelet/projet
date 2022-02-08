@@ -33,37 +33,16 @@ print_r($test);
 echo "</pre>";
 
 
-
-
-
-
-// $ch = curl_init();
-// IMPORTANT: the below line is a security risk, read https://paragonie.com/blog/2017/10/certainty-automated-cacert-pem-management-for-php-software
-// in most cases, you should set it to true
-// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// curl_setopt($ch, CURLOPT_URL, 'http://51.255.160.47:8282/resources/frames.json');
-// $result = curl_exec($ch);
-// curl_close($ch);
-
-// $obj = json_decode($result);
-// echo $obj->date;
-
-
-
-
-
 $sql = "select * from athjson";
-$result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
-
+$result = mysqli_query($connection, $sql);
 $emparray = array();
 while ($row = mysqli_fetch_assoc($result)) {
     $emparray[] = $row;
 }
-json_encode($emparray);
+print_r($emparray);
 
-header('Content-disposition: attachment; filename=jsonFile.json');
-header('Content-type: application/json');
+// header('Content-disposition: attachment; filename=jsonFile.json');
+// header('Content-type: application/json');
 ?>
 
 <!DOCTYPE html>
