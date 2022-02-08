@@ -18,7 +18,7 @@
             <input id="nav-toggle" type="checkbox">
             <div class="logo">
 
-                <a href="#"><img src="imgs/logo.png" alt="logo"></a>
+                <a href="index.php"><img src="imgs/logo.png" alt="logo"></a>
             </div>
 
 

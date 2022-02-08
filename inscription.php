@@ -54,7 +54,7 @@
 			<input type="text" name="nom" placeholder="nom" />
 			<input type="email" name="email" placeholder="email" />
 			<input type="password" name="password" placeholder="password" />
-			<button type="submit">Sign Up</button>
+			<button type="submit">S'inscrire</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
