@@ -58,7 +58,7 @@ if (!empty($_POST)) {
             <input id="nav-toggle" type="checkbox">
             <div class="logo">
 
-                <a href="#"><img src="imgs/logo.png" alt="logo"></a>
+                <a href="index.php"><img src="imgs/logo.png" alt="logo"></a>
             </div>
 
 
@@ -162,7 +162,9 @@ if (!empty($_POST)) {
 
 
 
-
+    <?php
+    include("projet\sqltojson.php")
+    ?>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

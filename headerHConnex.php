@@ -26,7 +26,7 @@
 
                 <li><a href="profil.php">Dashbord</a></li>
                 <li><a href="mentionlegale.php">Qui somme-nous?</a></li>
-                <li class="deconnexion"><a href="Deconnection.php">Log/out</a></li>
+                <li class="deconnexion"><a href="deconnection.php">Log/out</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
