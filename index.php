@@ -18,15 +18,15 @@
             <input id="nav-toggle" type="checkbox">
             <div class="logo">
 
-                <a href="#"><img src="imgs/logo.png" alt="logo"></a>
+                <a href="index.php"><img src="imgs/logo.png" alt="logo"></a>
             </div>
 
 
             <ul class="links">
 
-                <!-- <li><a href="profil.php">Profil</a></li>-->
+
                 <li><a href="mentionlegale.php">Qui somme-nous?</a></li>
-                <li class="deconnexion"><a href="headerHConnex.php">Log</a></li>
+                <li class="deconnexion"><a href="headerHConnex.php">Login</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
