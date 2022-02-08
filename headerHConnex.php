@@ -7,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="headerHConnex.css">
+    <link rel="stylesheet" href="path/to/css-loader.css">
     <title>Header Après Connexion</title>
 </head>
 
 <body>
 
+
+    <!-- Loader -->
+    <div class="loader loader-default"></div>
+
+    <!-- Loader active -->
+    <div class="loader loader-pokeball is-active"></div>
+    <!--------------->
     <header>
         <nav>
 
@@ -26,7 +34,7 @@
 
                 <li><a href="profil.php">Dashbord</a></li>
                 <li><a href="mentionlegale.php">Qui somme-nous?</a></li>
-                <li class="deconnexion"><a href="deconnection.php">Log/out</a></li>
+                <li class="deconnexion"><a href="Deconnection.php">Log/out</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
@@ -45,11 +53,6 @@
 
 
 
-
-    <div id="load"></div>
-    <div id="contents">
-        jlkjjlkjlkjlkjlklk
-    </div>
 
 
 

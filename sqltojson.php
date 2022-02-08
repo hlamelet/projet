@@ -5,13 +5,13 @@ include("pdo.php");
 $url = "http://51.255.160.47:8282/resources/frames.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
-echo "My token: " . $json_data[0]['date'];
+// echo "My token: " . $json_data[0]['date'];
 
 
 echo "<pre>";
 foreach ($json_data as $i) {
-    print_r($i);
-    echo "<br/>";
+    // print_r($i);
+    // echo "<br/>";
     $idAVerif = $i['identification'];
     $checkId = $pdo->prepare("SELECT * FROM athjson WHERE list_identification = '$idAVerif';");
     $checkId->execute();
@@ -22,27 +22,27 @@ foreach ($json_data as $i) {
        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param('sssssssssssssssssssss', $i['date'], $i['version'], $i['headerLength'], $i['service'], $i['identification'], $i['flags']['code'], $i['ttl'], $i['protocol']['name'], $i['protocol']['checksum']['status'], $i['protocol']['ports']['from'], $i['protocol']['ports']['dest'], $i['headerChecksum'], $i['ip']['from'], $i['ip']['dest'], $i['protocol']['ports']['dest'], $i['protocol']['version'], $i['protocol']['contentType'], $i['protocol']['checksum']['code'], $i['protocol']['type'], $i['protocol']['code'], $i['status'],);
         $stmt->execute();
-    } else {
-        die();
     }
 }
-$test = $json_data[0]['date'];
+// $test = $json_data[0]['date'];
 
-print_r($test);
-
-echo "</pre>";
+// print_r($test);
 
 
-$sql = "select * from athjson";
+
+
+$sql = "select * from `athjson` WHERE 1";
 $result = mysqli_query($connection, $sql);
+
 $emparray = array();
 while ($row = mysqli_fetch_assoc($result)) {
     $emparray[] = $row;
 }
-print_r($emparray);
 
-// header('Content-disposition: attachment; filename=jsonFile.json');
-// header('Content-type: application/json');
+// print_r($emparray);
+echo "</pre>";
+//  header('Content-disposition: attachment; filename=jsonFile.json');
+//  header('Content-type: application/json');
 ?>
 
 <!DOCTYPE html>
@@ -57,19 +57,32 @@ print_r($emparray);
 
 <body>
     <?php
-    echo "<div id='test'></div>";
+    echo "<table id='test'></table>";
     ?>
 </body>
 <script>
-    var jsonJs = <?php echo json_encode($emparray) ?>;
+    var jsonJs = <?php echo json_encode($emparray, true) ?>;
     console.log(jsonJs)
-    fooArray = Object.entries(jsonJs);
-    fooArray.forEach(([key, value]) => {
-        console.log(key); // 'one'
-        console.log(value); // 1   
+    // fooArray = Object.entries(jsonJs);
+    // fooArray.forEach(([key, value]) => {
+    //     console.log(key); // 'one'
+    //     console.log(value); // 1  
+    //     document.getElementById('test').innerHTML += "<tr>".ee.
+    //     "</tr>"
 
-    })
-    console.log(fooArray[0])
+    // })"
+
+    jsonJs.forEach(element => {
+        // console.log(element['list_date'])
+        document.getElementById('test').innerHTML +=
+            "<tr><td>" + element['list_identification'] +
+            "</td><td>" + element['list_ip_dest'] +
+            "</td><td>" + element['list_ip_from'] +
+            "</td><td>" + element['list_identification'] +
+            "</td></tr>";
+    });
+
+    console.log(jsonJs[0]['list_date'])
 </script>
 
 </html>
