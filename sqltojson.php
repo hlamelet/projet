@@ -12,22 +12,23 @@ echo "<pre>";
 foreach ($json_data as $i) {
     print_r($i);
     echo "<br/>";
+    $idAVerif = $i['identification'];
+    $checkId = $pdo->prepare("SELECT * FROM athjson WHERE list_identification = '$idAVerif';");
+    $checkId->execute();
+    $id = $checkId->fetch();
 
-    
-
-   ==$i['identification']
-
-    $stmt = $connection->prepare("INSERT INTO athjson (list_date, list_version, list_headerLength, list_service, list_identification, list_flags_code, list_ttl, list_protocol_name, list_protocol_checksum_status, list_protocol_ports_from, list_protocol_ports_dest, list_headerChecksum, list_ip_from, list_ip_dest, list_protocol_flags_code, list_protocol_version, list_protocol_contentType, list_protocol_checksum_code, list_protocol_type, list_protocol_code, list_status)
+    if (empty($id)) {
+        $stmt = $connection->prepare("INSERT INTO athjson (list_date, list_version, list_headerLength, list_service, list_identification, list_flags_code, list_ttl, list_protocol_name, list_protocol_checksum_status, list_protocol_ports_from, list_protocol_ports_dest, list_headerChecksum, list_ip_from, list_ip_dest, list_protocol_flags_code, list_protocol_version, list_protocol_contentType, list_protocol_checksum_code, list_protocol_type, list_protocol_code, list_status)
        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param('sssssssssssssssssssss', $i['date'], $i['version'], $i['headerLength'], $i['service'], $i['identification'], $i['flags']['code'], $i['ttl'], $i['protocol']['name'], $i['protocol']['checksum']['status'], $i['protocol']['ports']['from'], $i['protocol']['ports']['dest'], $i['headerChecksum'], $i['ip']['from'], $i['ip']['dest'], $i['protocol']['ports']['dest'], $i['protocol']['version'], $i['protocol']['contentType'], $i['protocol']['checksum']['code'], $i['protocol']['type'], $i['protocol']['code'], $i['status'],);
-    $stmt->execute();
+        $stmt->bind_param('sssssssssssssssssssss', $i['date'], $i['version'], $i['headerLength'], $i['service'], $i['identification'], $i['flags']['code'], $i['ttl'], $i['protocol']['name'], $i['protocol']['checksum']['status'], $i['protocol']['ports']['from'], $i['protocol']['ports']['dest'], $i['headerChecksum'], $i['ip']['from'], $i['ip']['dest'], $i['protocol']['ports']['dest'], $i['protocol']['version'], $i['protocol']['contentType'], $i['protocol']['checksum']['code'], $i['protocol']['type'], $i['protocol']['code'], $i['status'],);
+        $stmt->execute();
+    } else {
+        die();
+    }
 }
 $test = $json_data[0]['date'];
 
 print_r($test);
-// $colnames = $json_data->getColumnNames();
-
-// print_r($colnames);
 
 echo "</pre>";
 
@@ -59,10 +60,10 @@ $emparray = array();
 while ($row = mysqli_fetch_assoc($result)) {
     $emparray[] = $row;
 }
-// echo json_encode($emparray);
+json_encode($emparray);
 
-// header('Content-disposition: attachment; filename=jsonFile.json');
-// header('Content-type: application/json');
+header('Content-disposition: attachment; filename=jsonFile.json');
+header('Content-type: application/json');
 ?>
 
 <!DOCTYPE html>
