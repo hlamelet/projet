@@ -1,3 +1,3 @@
 <?php
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=ath', "root");
+$pdo = new PDO('mysql:host=localhost;dbname=sécurité', "root","");
