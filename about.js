@@ -1,10 +1,26 @@
-const btn = document.getElementById('menu-btn')
-const nav = document.getElementById('menu')
+let menu = document.querySelector('#menu-bars');
+let navbar = document.querySelector('.navbar');
 
-function navToggle() {
-  btn.classList.toggle('open')
-  nav.classList.toggle('hidden')
-  document.body.classList.toggle('no-scroll')
+menu.onclick = () =>{
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
+  searchIcon.classList.remove('fa-times');
+  searchForm.classList.remove('active');
 }
 
-btn.addEventListener('click', navToggle)
+let searchIcon = document.querySelector('#search-icon');
+let searchForm = document.querySelector('.search-form');
+
+searchIcon.onclick = () =>{
+  searchIcon.classList.toggle('fa-times');
+  searchForm.classList.toggle('active');
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+}
+
+window.onscroll = () =>{
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+  searchIcon.classList.remove('fa-times');
+  searchForm.classList.remove('active');
+}
