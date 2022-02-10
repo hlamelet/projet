@@ -69,7 +69,7 @@ echo "</pre>";
 
 <body>
     <?php
-    echo "<includes('');
+    echo "<includes('')";
     echo "<table id='test'>
     <tr><th>Identifiant</th>
     <th>Ip destination</th>
@@ -111,7 +111,8 @@ echo "</pre>";
             "</td></tr>";
     });
 
-    console.log(jsonJs[0]['list_date'])
+    console.log(jsonJs[0]['list_date']) ?
+        >
 </script>
 
 </html>
