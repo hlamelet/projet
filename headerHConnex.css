@@ -14,6 +14,13 @@ body {
     padding: 0;
 }
 
+#loader {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin: 0;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -386,7 +393,7 @@ button:focus {
 
 /*---mobile----*/
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     .Cardcontainer {
         font-size: small;
         flex-wrap: wrap;
