@@ -69,7 +69,11 @@ echo "</pre>";
 
 <body>
     <?php
+<<<<<<< Updated upstream
     echo "<includes('')";
+=======
+
+>>>>>>> Stashed changes
     echo "<table id='test'>
     <tr><th>Identifiant</th>
     <th>Ip destination</th>

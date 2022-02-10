@@ -13,6 +13,10 @@ if (!empty($_POST)) {
         $nom = $_POST["nom"];
         $email = $_POST["email"];
         $password = $_POST["password"];
+        $_SESSION["nom"] = $_POST["nom"];
+        $_SESSION["email"] = $_POST["email"];
+
+
 
 
         $checkUser = $pdo->prepare("SELECT * FROM user WHERE email = '$email';");
@@ -35,6 +39,7 @@ if (!empty($_POST)) {
         }
     }
 }
+print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -162,10 +167,6 @@ if (!empty($_POST)) {
 
 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
