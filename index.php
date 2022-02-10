@@ -44,99 +44,134 @@ if (!empty($_POST)) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="headerHConnex.css">
-    <title>Header Après Connexion</title>
+    <title>Connexion</title>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-
-            <input id="nav-toggle" type="checkbox">
-            <div class="logo">
-
-                <a href="index.php"><img src="imgs/logo.png" alt="logo"></a>
-            </div>
-
-
-            <ul class="links">
-
-
-                <li><a href="mentionlegale.php">Qui somme-nous?</a></li>
-                <li class=" deconnexion"><a href="#" id="button" class="">Login</a></li>
-            </ul>
-            <label for="nav-toggle" class="icon-burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-
-            </label>
 
 
 
-        </nav>
-    </header>
+
+
+
+
+
+    <nav>
+
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+
+            <a href="index.php"><img src="imgs/logo.png" alt="logo"></a>
+        </div>
+
+
+        <ul class="links">
+
+
+            <li><a href="about.php">Qui somme-nous?</a></li>
+            <li class="connexion"><a href="#" id="button" class="button">Login</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+
+        </label>
+
+
+
+    </nav>
+
     <!--------------------->
 
 
 
 
 
-    <!-- Card Section -->
-
-    <section class="card-container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-    </section>
-
-    <!-- Modal Section -->
-
-    <div class="Cardcontainer" id="container">
-        <div class="close">+</div>
-        <div class="form-container sign-up-container">
 
 
 
-            <form action="#" method="post">
 
-                <h1>Créer un compte</h1>
-                <input type="text" name="nom" placeholder="nom" />
-                <input type="email" name="email" placeholder="email" />
-                <input type="password" name="password" placeholder="password" />
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
+    <!--------popUp---------->
 
-            <form action="#" method="post">
-                <h1>S'identifier</h1>
-                <input type="email" placeholder="email" />
-                <input type="password" placeholder="Password" />
-                <a href="#">Mot de passe oublié?</a>
-                <button type="submit">S'identifier</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Bienvenue !</h1>
-                    <p>Pour rester en contact avec nous, veuillez vous connecter avec vos informations personnelles</p>
-                    <button class="ghost" id="signIn">S'identifier</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Salut !</h1>
-                    <p>Entrez vos données personnelles et commencez votre voyage avec nous</p>
-                    <button class="ghost" id="signUp">S'inscrire</button>
-                </div>
+    <?php include('popUp.php') ?>
+
+    <!------fin popUp--------->
+
+
+
+
+
+    <!---sections--->
+    <section class="section-index1">
+        <div class="home-section">
+            <div class="desc-home">
+
+                <h2>L’analyse du réseau :</h2>
+                <p>Les réseaux sont les piliers de chaque entreprise. Même dans les petites entreprises, la perte de productivité lors d'une panne de réseau peut entraîner de lourds dommages.<span> L’analyse
+                        du réseau vous aide à anticiper les pannes potentielles et à résoudre les problèmes de réseau de manière proactive. Cela aide à maintenir un réseau sans congestion qui maintient votre entreprise opérationnelle. Un logiciel d’analyse réseau vous aide à contrôler les performances de tout appareil IP et aide les entreprises à visualiser à distance les performances de leur système et à analyser les services réseau, l'utilisation de la bande passante, les commutateurs, les routeurs et le flux de trafic.</span>
+                </p>
+                <button class="savoir-plus">Savoir plus </button>
             </div>
 
+            <div>
+                <img src="imgs/gps-tracking_features_route_management.png" alt="">
+            </div>
         </div>
 
-    </div>
+
+    </section>
+    <!---->
+    <section class="section-index2">
+        <div class="h1-notreSite">
+            <h1>Notre Site :</h1>
+        </div>
+
+        <div class="allcards">
+            <div class="card" style="width: 18rem;">
+
+                <img class="card-img-top" src="imgs/test img1.png" height="200px" alt="Card image cap">
+
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="imgs/test img1.png" height="200px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="imgs/test img1.png" height="200px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------section3------------->
+
+    <section class="section-index3">
+        <div class="home-section">
+            <div>
+                <img src="imgs/undraw_traveling_re_weve.svg" alt="">
+            </div>
+            <div class="desc-home">
+                <h1>Commencez en toute sécurité</h1>
+
+                <a href="#"> <button class="connexion" id="button">Rejoignez-nous</button></a>
+            </div>
+
+
+        </div>
+    </section>
 
 
 
@@ -145,27 +180,13 @@ if (!empty($_POST)) {
 
 
 
+    <!------footer------>
+
+    <?php include('footer.php') ?>
+    <!--------------->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

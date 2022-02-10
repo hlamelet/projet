@@ -8,17 +8,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-}
-
-a {
+nav a {
     text-decoration: none;
     color: #fff;
 }
@@ -68,12 +58,12 @@ nav .links li {
     background-color: #2c698d;
 }
 
-.links .deconnexion {
+.deconnexion {
     background-color: red;
     margin-right: 40px;
 }
 
-.links .deconnexion:hover {
+.deconnexion:hover {
     background-color: #d31010;
 }
 
