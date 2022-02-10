@@ -13,6 +13,10 @@ if (!empty($_POST)) {
         $nom = $_POST["nom"];
         $email = $_POST["email"];
         $password = $_POST["password"];
+        $_SESSION["nom"] = $_POST["nom"];
+        $_SESSION["email"] = $_POST["email"];
+
+
 
 
         $checkUser = $pdo->prepare("SELECT * FROM user WHERE email = '$email';");
@@ -35,6 +39,7 @@ if (!empty($_POST)) {
         }
     }
 }
+print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -184,7 +189,6 @@ if (!empty($_POST)) {
 
     <?php include('footer.php') ?>
     <!--------------->
-
 
 
 
