@@ -15,13 +15,16 @@ echo "<pre>";
 foreach ($json_data as $i) {
 
     $idAVerif = $i['identification'];
-    $checkId = $pdo->prepare("SELECT * FROM athjson WHERE list_identification = '$idAVerif';");
-    $checkId->execute();
-    $id = $checkId->fetch();
+    $dateAVerif = $i['date'];
+    $checkDate = $pdo->prepare("SELECT * FROM athjson WHERE list_date = '$dateAVerif' AND list_identification = '$idAVerif';");
+    $checkDate->execute();
+    $date = $checkDate->fetch();
 
-    if (empty($id)) {
+
+    if (empty($date)) {
+
         $stmt = $connection->prepare("INSERT INTO athjson (list_date, list_version, list_headerLength, list_service, list_identification, list_flags_code, list_ttl, list_protocol_name, list_protocol_checksum_status, list_protocol_ports_from, list_protocol_ports_dest, list_headerChecksum, list_ip_from, list_ip_dest, list_protocol_flags_code, list_protocol_version, list_protocol_contentType, list_protocol_checksum_code, list_protocol_type, list_protocol_code, list_status)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param('sssssssssssssssssssss', $i['date'], $i['version'], $i['headerLength'], $i['service'], $i['identification'], $i['flags']['code'], $i['ttl'], $i['protocol']['name'], $i['protocol']['checksum']['status'], $i['protocol']['ports']['from'], $i['protocol']['ports']['dest'], $i['headerChecksum'], $i['ip']['from'], $i['ip']['dest'], $i['protocol']['ports']['dest'], $i['protocol']['version'], $i['protocol']['contentType'], $i['protocol']['checksum']['code'], $i['protocol']['type'], $i['protocol']['code'], $i['status'],);
         $stmt->execute();
     }
@@ -45,6 +48,18 @@ echo "</pre>";
 
 ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,67 +67,190 @@ echo "</pre>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="datatable.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="dashBoard.css">
+
 
     <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        th {
-            color: white;
-            background-color: #272643;
-            width: 100px
-        }
-    </style>
 </head>
 
 <body>
+
+    <!-- ---------------------------------------------------------- TABLEAU -->
+    <div class="table">
+        <table id='myTable'>
+            <thead>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Ip destination</th>
+                    <th>Ip source</th>
+                    <th>date</th>
+                    <th>nom du protocole</th>
+                    <th>ports de destination</th>
+                    <th>ports de source</th>
+                    <th>statut du protocole</th>
+                    <th>ttl</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+    <!-- --------------------------------------------------------------------type de requete HTML -->
+    <div>
+        <canvas id="typeDeRequete" width="240px" height="240px"></canvas>
+    </div>
     <?php
-    // ------------------------------------------------------------ TABLEAU
-    echo "<table id='test'>
-    <tr><th>Identifiant</th>
-    <th>Ip destination</th>
-    <th>Ip source</th>
-    <th>date</th>
-    <th>nom du protocole</th>
-    <th>ports de destination</th>
-    <th>ports de source</th>
-    <th>statut du protocole</th>
-    <th>ttl</th>
-    </table>";
+    $sql = "select * from `athjson` WHERE 1";
+    $result = mysqli_query($connection, $sql);
+
+    $jsonparray = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $jsonArray[] = "\"" . $row['list_protocol_name'] . "\"";
+    }
+    print_r(array_unique($jsonArray));
+
+
     ?>
+    <script>
+        $(function() {
+            /*from   w ww .  ja va2 s  . c o  m*/
+            var ctx = document.getElementById("typeDeRequete").getContext('2d');
+            var data = {
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                        '#f39c12',
+                        '#f39cFF',
+                    ],
+                }],
+                labels: [
+                    'UDP',
+                    'TCP',
+                    'ICMP',
+
+                ]
+            };
+            var myDoughnutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- --------------------------------------------------------------------autre graphique -->
+    <div>
+        <canvas id="layanan_subbagian" width="240px" height="240px"></canvas>
+    </div>
+
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
     // ------------------------------------------------------------ ARRAY TO JSON
-    var jsonJs = <?php echo json_encode($emparray, true) ?>;
-    console.log(jsonJs)
-    // fooArray = Object.entries(jsonJs);
-    // fooArray.forEach(([key, value]) => {
-    //     console.log(key); // 'one'
-    //     console.log(value); // 1  
-    //     document.getElementById('test').innerHTML += "<tr>".ee.
-    //     "</tr>"
 
-    // })"
-    // ------------------------------------------------------------ INSERTION DU JSON DANS LE TABLEAU
-    jsonJs.forEach(element => {
-        let dateObject = new Date(element['list_date'] * 1000)
-        let readableDate = dateObject.toLocaleString()
-        document.getElementById('test').innerHTML +=
-            "<tr><td>" + element['list_identification'] +
-            "</td><td>" + element['list_ip_dest'] +
-            "</td><td>" + element['list_ip_from'] +
-            "</td><td>" + readableDate +
-            "</td><td>" + element['list_protocol_name'] +
-            "</td><td>" + element['list_protocol_ports_dest'] +
-            "</td><td>" + element['list_protocol_ports_from'] +
-            "</td><td>" + element['list_protocol_checksum_status'] +
-            "</td><td>" + element['list_ttl'] +
-            "</td></tr>";
+
+    $('#myTable').DataTable({
+        processing: true,
+        serverSide: true,
+        serverMethod: "post",
+        ajax: {
+            url: 'callAjax.php'
+        },
+        columns: [{
+                data: "list_identification"
+            },
+            {
+                data: "list_ip_dest"
+            },
+            {
+                data: "list_ip_from"
+            },
+            {
+                data: "list_date"
+            },
+            {
+                data: "list_protocol_name"
+            },
+            {
+                data: "list_protocol_ports_dest"
+            },
+            {
+                data: "list_protocol_ports_from"
+            },
+            {
+                data: "list_protocol_checksum_status"
+            },
+            {
+                data: "list_ttl"
+            },
+        ]
     });
 
-    console.log(jsonJs[0]['list_date'])
+
+
+    // ------------------------------------------------------------ INSERTION DU JSON DANS LE TABLEAU
+
+    // --------------------------------------------------------------Le nombre de trames par type de requête
+
+    $(function() {
+        var ctx_2 = document.getElementById("layanan_subbagian").getContext('2d');
+        var data_2 = {
+            datasets: [{
+                data: [10, 20, 30],
+                backgroundColor: [
+                    '#3c8dbc',
+                    '#f56954',
+                    '#f39c12',
+                ],
+            }],
+            labels: [
+                'UDP',
+                'TCP',
+                'ICMP'
+            ]
+        };
+        var myDoughnutChart_2 = new Chart(ctx_2, {
+            type: 'doughnut',
+            data: data_2,
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 12
+                    }
+                }
+            }
+        });
+    });
 </script>
+
 
 </html>
