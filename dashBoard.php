@@ -1,17 +1,19 @@
 <?php
 include("pdo.php");
 
-
+// ------------------------------------------------------------sécurité 
+if (!isset($_SESSION['email'])) {
+    header("location: index.php");
+}
+// ------------------------------------------------------------JSON vers la BDD
 $url = "http://51.255.160.47:8282/resources/frames.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
-// echo "My token: " . $json_data[0]['date'];
 
 
 echo "<pre>";
 foreach ($json_data as $i) {
-    // print_r($i);
-    // echo "<br/>";
+
     $idAVerif = $i['identification'];
     $checkId = $pdo->prepare("SELECT * FROM athjson WHERE list_identification = '$idAVerif';");
     $checkId->execute();
@@ -30,7 +32,7 @@ foreach ($json_data as $i) {
 
 
 
-
+// ------------------------------------------------------------BDD vers ARRAY
 $sql = "select * from `athjson` WHERE 1";
 $result = mysqli_query($connection, $sql);
 
@@ -39,10 +41,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $emparray[] = $row;
 }
 
-// print_r($emparray);
 echo "</pre>";
-//  header('Content-disposition: attachment; filename=jsonFile.json');
-//  header('Content-type: application/json');
+
 ?>
 
 <!DOCTYPE html>
@@ -69,11 +69,7 @@ echo "</pre>";
 
 <body>
     <?php
-<<<<<<< Updated upstream
-    echo "<includes('')";
-=======
-
->>>>>>> Stashed changes
+    // ------------------------------------------------------------ TABLEAU
     echo "<table id='test'>
     <tr><th>Identifiant</th>
     <th>Ip destination</th>
@@ -88,6 +84,7 @@ echo "</pre>";
     ?>
 </body>
 <script>
+    // ------------------------------------------------------------ ARRAY TO JSON
     var jsonJs = <?php echo json_encode($emparray, true) ?>;
     console.log(jsonJs)
     // fooArray = Object.entries(jsonJs);
@@ -98,7 +95,7 @@ echo "</pre>";
     //     "</tr>"
 
     // })"
-
+    // ------------------------------------------------------------ INSERTION DU JSON DANS LE TABLEAU
     jsonJs.forEach(element => {
         let dateObject = new Date(element['list_date'] * 1000)
         let readableDate = dateObject.toLocaleString()
@@ -115,8 +112,7 @@ echo "</pre>";
             "</td></tr>";
     });
 
-    console.log(jsonJs[0]['list_date']) ?
-        >
+    console.log(jsonJs[0]['list_date'])
 </script>
 
 </html>

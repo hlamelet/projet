@@ -1,45 +1,12 @@
 <?php include("pdo.php");
-
 $error = false;
 
-if (!empty($_POST)) {
-    if (
-        empty($_POST["nom"]) || empty($_POST["email"])
-        || empty($_POST["password"])
-    ) {
-        $error = true;
-    } else {
 
-        $nom = $_POST["nom"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $_SESSION["nom"] = $_POST["nom"];
-        $_SESSION["email"] = $_POST["email"];
-
-
-
-
-        $checkUser = $pdo->prepare("SELECT * FROM user WHERE email = '$email';");
-        $checkUser->execute();
-        $user = $checkUser->fetch();
-
-        if (empty($user)) {
-
-            $RequestInsertUser = $pdo->prepare(
-                "INSERT INTO `user`(`nom`,`email`,`password`) 
-                    VALUES ('$nom','$email' ,'$password')"
-            );
-            if ($RequestInsertUser->execute()) {
-                header("location: index.php");
-            } else {
-                var_dump($RequestInsertUser->errorInfo());
-            }
-        } else {
-            echo "L'email est déjà utilisée";
-        }
-    }
+if (!empty($_SESSION)) {
+    echo "<pre>";
+    print_r($_SESSION);
+    echo "</pre>";
 }
-print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +21,7 @@ print_r($_SESSION);
 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="headerHConnex.css">
-    <title>Connexion</title>
+    <title>index</title>
 </head>
 
 <body>
@@ -77,17 +44,28 @@ print_r($_SESSION);
 
 
         <ul class="links">
+            <?php
+            if (isset($_SESSION['email'])) {
+                echo "<a href='dashBoard.php'><li>Dashbord</li></a>";
+            }
+            ?>
+            <a href="about.php">
+                <li>Qui somme-nous?</li>
+            </a>
+            <?php
+            if (isset($_SESSION['email'])) {
+                echo "<a href='deconnexion.php'><li class='deconnexion'>Log/out</li></a>";
+            } else {
+                echo "<a href='#' id='button' class='button'><li class='connexion'>Login</li></a>";
+            }
+            ?>
 
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
 
-            <li><a href="about.php">Qui somme-nous?</a></li>
-            <li class="connexion"><a href="#" id="button" class="button">Login</a></li>
-        </ul>
-        <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-
-        </label>
+            </label>
 
 
 

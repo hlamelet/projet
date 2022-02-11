@@ -13,28 +13,15 @@
     <div class="card-father">
         <div class="Cardcontainer" id="container">
             <div class="close">+</div>
+
+            <!-- partie droite inscription--------------------------------------- -->
             <div class="form-container sign-up-container">
 
-
-
-                <form action="#" method="post">
-
-                    <h1>Créer un compte</h1>
-                    <input type="text" name="nom" placeholder="nom" />
-                    <input type="email" name="email" placeholder="email" />
-                    <input type="password" name="password" placeholder="password" />
-                    <button type="submit">Sign Up</button>
-                </form>
+                <?php include("inscription.php") ?>
             </div>
+            <!-- partie gauche connexion --------------------------------------- -->
             <div class="form-container sign-in-container">
-
-                <form action="#" method="post">
-                    <h1>S'identifier</h1>
-                    <input type="email" placeholder="email" />
-                    <input type="password" placeholder="Password" />
-                    <a href="#">Mot de passe oublié?</a>
-                    <button type="submit">S'identifier</button>
-                </form>
+                <?php include("connexion.php") ?>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
