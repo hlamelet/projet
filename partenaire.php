@@ -14,32 +14,32 @@
       rel="stylesheet"
     />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="mentions.css" />
+    <link rel="stylesheet" href="partenaire.css" />
   </head>
   <body>
     <section>
       <div class="row">
-        <h1>Nos Patenaires ! </h1>
+        <h1>Nos Partenaires ! </h1>
       </div>
       <div class="row">
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src="profile-img-1.png" />
+              <img src="imgs/costard.jpeg">
             </div>
-            <h3></h3>
+            <h3>Bryant Hall</h3>
             <p>Partenaire majeur</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://twitter.com/">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/home">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="https://www.google.com/intl/fr/gmail/about/">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -49,21 +49,21 @@
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src="profile-img-2.png" />
+              <img src="imgs/costard2.jpg" />
             </div>
-            <h3>Bryant Hall</h3>
+            <h3>Jimmy Hopkins</h3>
             <p>partenaire majeur</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://twitter.com/">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/home">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="https://www.google.com/intl/fr/gmail/about/">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -73,21 +73,21 @@
         <div class="column">
           <div class="card">
             <div class="img-container">
-              <img src="" />
+              <img src="imgs/costard3.jpg" />
             </div>
             <h3>Hope Watkins</h3>
-            <p>Foundataires et Investisseur majeur</p>
+            <p>Fondateur et Investisseur majeur</p>
             <div class="icons">
-              <a href="#">
+              <a href="https://twitter.com/">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/home">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#">
+              <a href="https://www.google.com/intl/fr/gmail/about/">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>

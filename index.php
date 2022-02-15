@@ -25,15 +25,6 @@ if (!empty($_SESSION)) {
 </head>
 
 <body>
-
-
-
-
-
-
-
-
-
     <nav>
 
         <input id="nav-toggle" type="checkbox">
@@ -66,31 +57,12 @@ if (!empty($_SESSION)) {
                 <div class="line"></div>
 
             </label>
-
-
-
     </nav>
 
     <!--------------------->
-
-
-
-
-
-
-
-
-
     <!--------popUp---------->
-
     <?php include('popUp.php') ?>
-
     <!------fin popUp--------->
-
-
-
-
-
     <!---sections--->
     <section class="section-index1">
         <div class="home-section">
@@ -148,11 +120,8 @@ if (!empty($_SESSION)) {
             </div>
             <div class="desc-home">
                 <h1>Commencez en toute sécurité</h1>
-
                 <a href="#"> <button class="connexion" id="button">Rejoignez-nous</button></a>
             </div>
-
-
         </div>
     </section>
 

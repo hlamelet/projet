@@ -32,7 +32,7 @@
                     <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                         <!-- Facebook -->
-                        <a class="fb-ic">
+                        <a  href="https://www.facebook.com/"class="fb-ic">
                             <i class="fab fa-facebook-f white-text mr-4"> </i>
                         </a>
                         <!-- Twitter -->
