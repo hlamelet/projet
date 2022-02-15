@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="dash.css">
 
+    <link rel="stylesheet" href="dash.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -84,11 +84,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="graph">
-                    <div class="graphBlock">
-                        <canvas id="typeDeRequete" width="240px" height="240px" class="canvas" style="display: inline;"></canvas>
+                <div class="graph" style="display: flex;">
+                    <div class="graphBlock" style="display: inline;width:50%;">
+                        <canvas id="typeDeRequete" width="240px" height="240px" class="canvas"></canvas>
                     </div>
-                    <div class="graphBlock">
-                        <canvas id="statutDuProtocole" width="240px" height="240px" class="canvas" style="display: inline;"></canvas>
+                    <div class="graphBlock" style="display: inline;width:50%;">
+                        <canvas id="statutDuProtocole" width="240px" height="240px" class="canvas"></canvas>
                     </div>
                 </div>

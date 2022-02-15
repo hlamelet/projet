@@ -254,6 +254,10 @@ body {
   }
 }
 /* ---------------------------------------------------------- */
-canvas {
+.graph {
+  display: flex;
+  background-color: rgb(223, 134, 134);
+}
+.canvas {
   display: inline;
 }

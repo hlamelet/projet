@@ -69,10 +69,11 @@ echo "</pre>";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="datatable.css">
 
     <link rel="stylesheet" href="C:\MAMP\htdocs\projet\dashBoard.css">
+    
     <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="datatable.css">
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -180,36 +181,36 @@ echo "</pre>";
 
     // --------------------------------------------------------------Le nombre de trames par type de requête
 
-    $(function() {
-        var ctx_2 = document.getElementById("typeDeReete").getContext('2d');
-        var data_2 = {
-            datasets: [{
-                data: [10, 20, 30],
-                backgroundColor: [
-                    '#3c8dbc',
-                    '#f56954',
-                    '#f39c12',
-                ],
-            }],
-            labels: [
-                <?php echo $labelsTypeDeRequete ?>
-            ]
-        };
-        var myDoughnutChart_2 = new Chart(ctx_2, {
-            type: 'doughnut',
-            data: data_2,
-            options: {
-                responsive: false,
-                maintainAspectRatio: false,
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        boxWidth: 12
-                    }
-                }
-            }
-        });
-    });
+    // $(function() {
+    //     var ctx_2 = document.getElementById("typeDeReete").getContext('2d');
+    //     var data_2 = {
+    //         datasets: [{
+    //             data: [10, 20, 30],
+    //             backgroundColor: [
+    //                 '#3c8dbc',
+    //                 '#f56954',
+    //                 '#f39c12',
+    //             ],
+    //         }],
+    //         labels: [
+    //             <?php echo $labelsTypeDeRequete ?>
+    //         ]
+    //     };
+    //     var myDoughnutChart_2 = new Chart(ctx_2, {
+    //         type: 'doughnut',
+    //         data: data_2,
+    //         options: {
+    //             responsive: false,
+    //             maintainAspectRatio: false,
+    //             legend: {
+    //                 position: 'bottom',
+    //                 labels: {
+    //                     boxWidth: 12
+    //                 }
+    //             }
+    //         }
+    //     });
+    // });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
