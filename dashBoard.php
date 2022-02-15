@@ -70,8 +70,7 @@ echo "</pre>";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
 
-    <link rel="stylesheet" href="C:\MAMP\htdocs\projet\dashBoard.css">
-    
+
     <link rel="stylesheet" href="dash.css">
     <link rel="stylesheet" href="datatable.css">
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
@@ -109,7 +108,7 @@ echo "</pre>";
     </div>
 
 
-    <?php include("C:\MAMP\htdocs\projet\graphique\graphiqueTypeDeRequete.php") ?>
+    <?php include("graphique\graphiqueTypeDeRequete.php") ?>
 
 
     </section>
