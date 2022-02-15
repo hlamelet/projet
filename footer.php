@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="headerHConnex.css">
-    <link rel="stylesheet" href="footer.css">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <title>header</title>
 </head>
 
 <body>
@@ -82,90 +79,37 @@
                         consectetur
                         adipisicing elit.</p>
 
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Social Media</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-
-                    <ul>
-
-                        <li><a href="#" target="_blank"><img src="imgs/facebook.png" alt="fb">Facebook</a></li>
-                        <li><a href="#" target="_blank"><img src="imgs/instagram.png" alt="in">Instagram</a></li>
-                        <li><a href="#" target="_blank"><img src="imgs/linkedin.png" alt="lnk">Linkedin</a> </li>
-                        <li><a href="#" target="_blank"><img src="imgs/twitter.png" alt="tr"> Twitter</a></li>
-
-
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a class="dark-grey-text" href="#!">Mention Legales</a>
-                    </p>
-                    <p>
-                        <a class="dark-grey-text" href="#!">Recrutement</a>
-                    </p>
-                    <p>
-                        <a class="dark-grey-text" href="#!">Partenaires</a>
-                    </p>
-                    <p>
-                        <a class="dark-grey-text" href="#!">Acceuil</a>
-                    </p>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fas fa-home mr-3"></i> <a href="https://www.needfor-school.com/" style="color: #fff;">Rouen, Need for School</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-envelope mr-3"></i> info@ath-reseau.com
-                    </p>
-                    <p>
-                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88
-                    </p>
-                    <p>
-                        <i class="fas fa-print mr-3"></i> + 01 234 567 89
-                    </p>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row -->
-            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-            <!-- Footer Links -->
+    <footer>
 
 
 
+        <div class="contact">
+            <h3>Contact :</h3><br>
+            <ul>
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center  py-3">© 2022 Copyright: ATH Reseau équipe
-                <a class="dark-grey-text" href="https://www.needfor-school.com/"> NEED FOR SCHOOL</a>
-            </div>
-            <!-- Copyright -->
+                <li><a href="https://www.facebook.com/profile.php?id=100076995846169" target="_blank"><img src="img/facebook.png" alt="fb"><br> Facebook</a></li>
+                <li><a href="https://www.instagram.com/vaccina_mon_carnet/?hl=fr" target="_blank"><img src="img/instagram.png" alt="in"><br> Instagram</a></li>
+                <li><img src="img/linkedin.png" alt="lnk"><br> Linkedin</li>
+                <li><a href="https://twitter.com/VaccinaNfs" target="_blank"><img src="img/twitter.png" alt="tr"><br> Twitter</a></li>
+
+
+            </ul>
+        </div>
+
+        <div class="infos">
+
+            <ul>
+                <h3>Informations :</h3><br>
+
+                <li><a href="mentionlegale.php" target="blank"> Mentions légales</a></li>
+                <li>Service client</li>
+                <li><a href="https://www.sante.fr/" target="blank"> Santé.fr</a></li>
+            </ul>
+
 
         </div>
     </footer>
-    <!-- Footer -->
+
 </body>
 
 </html>
