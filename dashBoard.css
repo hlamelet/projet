@@ -28,7 +28,10 @@ table {
   background-color: #e3f6f5;
 }
 /* ------------------------------------------------------------------------------------ */
-#myChart {
-  float: right;
-  width: 500px;
+.graph {
+  display: flex;
+  background-color: rgb(223, 134, 134);
+}
+.canvas {
+  display: inline;
 }

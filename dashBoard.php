@@ -44,6 +44,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $emparray[] = $row;
 }
 
+
 echo "</pre>";
 
 ?>
@@ -67,13 +68,14 @@ echo "</pre>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="datatable.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 
+    <link rel="stylesheet" href="C:\MAMP\htdocs\projet\dashBoard.css">
+    <link rel="stylesheet" href="dash.css">
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="dashBoard.css">
 
 
     <title>Document</title>
@@ -82,6 +84,10 @@ echo "</pre>";
 <body>
 
     <!-- ---------------------------------------------------------- TABLEAU -->
+
+    <?php include("dash.php") ?>
+
+
     <div class="table">
         <table id='myTable'>
             <thead>
@@ -100,64 +106,20 @@ echo "</pre>";
 
         </table>
     </div>
-    <!-- --------------------------------------------------------------------type de requete HTML -->
-    <div>
-        <canvas id="typeDeRequete" width="240px" height="240px"></canvas>
+
+
+    <?php include("C:\MAMP\htdocs\projet\graphique\graphiqueTypeDeRequete.php") ?>
+
+
+    </section>
+    </main>
+
+    <!-- <div>
+        <canvas id="TTLPerdu" width="240px" height="240px"></canvas>
     </div>
-    <?php
-    $sql = "select * from `athjson` WHERE 1";
-    $result = mysqli_query($connection, $sql);
-
-    $jsonparray = array();
-    while ($row = mysqli_fetch_assoc($result)) {
-        $jsonArray[] = "\"" . $row['list_protocol_name'] . "\"";
-    }
-    print_r(array_unique($jsonArray));
-
-
-    ?>
-    <script>
-        $(function() {
-            /*from   w ww .  ja va2 s  . c o  m*/
-            var ctx = document.getElementById("typeDeRequete").getContext('2d');
-            var data = {
-                datasets: [{
-                    data: [10, 20, 30],
-                    backgroundColor: [
-                        '#3c8dbc',
-                        '#f56954',
-                        '#f39c12',
-                        '#f39cFF',
-                    ],
-                }],
-                labels: [
-                    'UDP',
-                    'TCP',
-                    'ICMP',
-
-                ]
-            };
-            var myDoughnutChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: data,
-                options: {
-                    responsive: false,
-                    maintainAspectRatio: false,
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            boxWidth: 12
-                        }
-                    }
-                }
-            });
-        });
-    </script>
-    <!-- --------------------------------------------------------------------autre graphique -->
     <div>
-        <canvas id="layanan_subbagian" width="240px" height="240px"></canvas>
-    </div>
-
+        <canvas id="statutDuProtocole" width="240px" height="240px"></canvas>
+    </div> -->
 </body>
 
 
@@ -219,7 +181,7 @@ echo "</pre>";
     // --------------------------------------------------------------Le nombre de trames par type de requête
 
     $(function() {
-        var ctx_2 = document.getElementById("layanan_subbagian").getContext('2d');
+        var ctx_2 = document.getElementById("typeDeReete").getContext('2d');
         var data_2 = {
             datasets: [{
                 data: [10, 20, 30],
@@ -230,9 +192,7 @@ echo "</pre>";
                 ],
             }],
             labels: [
-                'UDP',
-                'TCP',
-                'ICMP'
+                <?php echo $labelsTypeDeRequete ?>
             ]
         };
         var myDoughnutChart_2 = new Chart(ctx_2, {
@@ -252,5 +212,7 @@ echo "</pre>";
     });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="dash.js"></script>
 
 </html>
