@@ -49,12 +49,16 @@ foreach ($ipEnvoi as $key => $i) {
     $labelsIpEnvoi[] = "'" . $key . "'";
     $ValeurIpEnvoi[] = $i;
 }
+$labelsIpEnvoi = implode(",", $labelsIpEnvoi);
+$ValeurIpEnvoi = implode(",", $ValeurIpEnvoi);
 // ----------------------------------------ip reception
 $ipReception = array_count_values($ipReception);
 foreach ($ipReception as $key => $i) {
     $labelsIpReception[] = "'" . $key . "'";
     $ValeurIpReception[] = $i;
 }
+$labelsIpReception = implode(",", $labelsIpReception);
+$ValeurIpReception = implode(",", $ValeurIpReception);
 // -----------------------------------choix des couleurs
 // $ipCouleur = [];
 // $ipCouleur += $ipEnvoi;
@@ -140,11 +144,11 @@ echo "</pre>";
         var ctx = document.getElementById("ipEnvoi").getContext('2d');
         var data = {
             datasets: [{
-                data: [<?php echo $ValeurStatutDuProtocole ?>],
-                backgroundColor: [<?php echo $couleurStatut ?>]
+                data: [<?php echo $ValeurIpEnvoi ?>],
+                backgroundColor: [<?php echo $couleurTypeDeRequete ?>]
             }],
             labels: [
-                <?php echo $labelsStatutDuProtocole ?>
+                <?php echo $labelsIpEnvoi ?>
             ]
         };
         var myDoughnutChart = new Chart(ctx, {
@@ -170,11 +174,11 @@ echo "</pre>";
         var ctx = document.getElementById("ipReception").getContext('2d');
         var data = {
             datasets: [{
-                data: [<?php echo $ValeurStatutDuProtocole ?>],
-                backgroundColor: [<?php echo $couleurStatut ?>]
+                data: [<?php echo $ValeurIpReception ?>],
+                backgroundColor: [<?php echo $couleurTypeDeRequete ?>]
             }],
             labels: [
-                <?php echo $labelsStatutDuProtocole ?>
+                <?php echo $labelsIpReception ?>
             ]
         };
         var myDoughnutChart = new Chart(ctx, {
