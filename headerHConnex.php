@@ -29,7 +29,7 @@
 
             <ul class="links">
 
-                <li><a href="php/">Dashbord</a></li>
+                <li><a href="dashBoard">Dashbord</a></li>
                 <li><a href="php/about.php">Qui somme-nous?</a></li>
                 <a href="Deconnection.php">
                     <li class="deconnexion"><img src="imgs/logout.png" width="30px" alt="logout"> Logout</li>

@@ -20,13 +20,20 @@
 
         <ul class="links">
 
-
+            <?php if (isset($_SESSION['email'])) {
+                echo "<li><a href='dashBoard.php'>Dashbord</a></li>";
+            }
+            ?>
             <li><a href="about.php">Qui somme-nous?</a></li>
-
-            <a href="#" id="button" class="button">
-                <li class="connexion"><img src="imgs/login.png" alt=""> Login </li>
-            </a>
-
+            <?php if (!isset($_SESSION['email'])) {
+                echo "<a href='#' id='button' class='button'>";
+                echo "<li class='connexion'><img src='imgs/login.png' alt=''> Login </li></a>";
+            }
+            if (isset($_SESSION['email'])) {
+                echo "<a href='deconnexion.php'>";
+                echo "<li class='deconnexion'><img src='imgs/logout.png' width='30px' alt='logout'> Logout</li></a>";
+            }
+            ?>
         </ul>
         <label for="nav-toggle" class="icon-burger">
             <div class="line"></div>
@@ -40,7 +47,7 @@
     </nav>
 
 
-    <?php include('popUp.php') ?>
+    <?php include('incPopUP\popUp.php') ?>
 
 
 </body>
