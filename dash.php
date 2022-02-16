@@ -64,8 +64,8 @@
                     <div class="col-xl-3 col-lg-6 col-12">
                         <div class="card shadow">
                             <div class="desc">
-                                <span> TEST</span>
-                                <p>Total 10</p>
+                                <span> 4</span>
+                                <p>Type de protocole Actif</p>
                             </div>
                             <i class="bi bi-ui-checks"></i>
                         </div>
@@ -76,7 +76,7 @@
                                 <span>TEST</span>
                                 <p>Total 10</p>
                             </div>
-                            <i class="bi bi-ui-checks"></i>
+                            <i class="bi bi-wifi"></i>
                         </div>
                     </div>
                 </div>
