@@ -104,6 +104,10 @@ section>h2 {
     padding: 20px;
 }
 
+h2 a img {
+    width: 200px;
+}
+
 
 /*-----devs coords------*/
 
