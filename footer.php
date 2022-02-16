@@ -116,7 +116,7 @@
                         <a class="dark-grey-text" href="about.php">Qui somme-nous?</a>
                     </p>
                     <p>
-                        <a class="dark-grey-text" href="about.php#partenaires">Partenaires</a>
+                        <a class="dark-grey-text" href="partenaire.php">Partenaires</a>
                     </p>
                     <p>
                         <a class="dark-grey-text" href="index.php">Accueil</a>
