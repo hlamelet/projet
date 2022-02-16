@@ -78,7 +78,7 @@ if (!empty($_POST)) {
 
 	</form>
 
-	<script src="D:\AHMAD ahmad\Documents\xamp\htdocs\projet trames\projet réseau\js\popUpVerifsInscrption.js"></script>
+	
 
 </body>
 
