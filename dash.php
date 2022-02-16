@@ -19,7 +19,7 @@
         </a>
         <ul class="menu">
             <li class="users"><a href=""><i class="bi bi-person-circle"></i>
-                    Session :<span> Admin</span>
+                    Session : <span> Admin</span>
             <li class="active"><a href=""><i class="bi bi-house-fill"></i><span>Dashboard</span>
                 </a></li>
             <li class="accuiel"><a href="index.php"><i class="bi bi-box-arrow-left"></i><span>Accueil</span>
@@ -46,7 +46,7 @@
                         <div class="card shadow">
                             <div class="desc">
                                 <span>100</span>
-                                <p>Utilisateurs connectée</p>
+                                <p>Utilisateurs connectée </p>
                             </div>
                             <i class="bi bi-people-fill"></i>
                         </div>
@@ -56,7 +56,7 @@
                         <div class="card shadow">
                             <div class="desc">
                                 <span>10</span>
-                                <p>Trames réseaux custom</p>
+                                <p>Serveur Actif</p>
                             </div>
                             <i class="bi bi-server"></i>
                         </div>
