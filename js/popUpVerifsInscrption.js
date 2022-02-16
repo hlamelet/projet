@@ -162,13 +162,6 @@ function emailChange() {
     }
 }
 
-$(document).on('click', '#btnInscription', function() {
 
-    if (inputNom || inputPassword || inputEmail == "") {
-        $('form').prepend("hellooo");
-    } else {
-
-    }
-})
 
 /*----------verifs--fin-----------*/
