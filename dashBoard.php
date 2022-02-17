@@ -77,6 +77,7 @@ echo "</pre>";
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <?php include("graphique\graphiqueTypeDeRequete.php") ?>
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
@@ -121,8 +122,8 @@ echo "</pre>";
                     <div class="col-xl-3 col-lg-6 col-12">
                         <div class="card shadow">
                             <div class="desc">
-                                <span>100</span>
-                                <p>Utilisateurs connectée</p>
+                                <span><?php echo $comptecree ?></span>
+                                <p>Compte Crées sur le site</p>
                             </div>
                             <i class="bi bi-people-fill"></i>
                         </div>
@@ -131,17 +132,8 @@ echo "</pre>";
                     <div class="col-xl-3 col-lg-6 col-12">
                         <div class="card shadow">
                             <div class="desc">
-                            <span>10</span>
-                                <p>Serveur Actif</p>
-                            </div>
-                            <i class="bi bi-server"></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-12">
-                        <div class="card shadow">
-                            <div class="desc">
-                            <span> 4</span>
-                                <p>Type de protocole Actif</p>
+                                <span><?php echo $nbrTypeRequete ?></span>
+                                <p>Type de protocole sur la trame</p>
                             </div>
                             <i class="bi bi-ui-checks"></i>
                         </div>
@@ -149,8 +141,17 @@ echo "</pre>";
                     <div class="col-xl-3 col-lg-6 col-12">
                         <div class="card shadow">
                             <div class="desc">
-                            <span>TEST</span>
-                                <p>Total 10</p>
+                                <span><?php echo $ttlPerdu ?></span>
+                                <p>TTL total perdu</p>
+                            </div>
+                            <i class="bi bi-wifi"></i>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="card shadow">
+                            <div class="desc">
+                                <span><?php echo ($ttlPerdu / array_sum($jsonArray)) ?></span>
+                                <p>TTL total perdu en moyenne par requête</p>
                             </div>
                             <i class="bi bi-wifi"></i>
                         </div>
@@ -195,7 +196,6 @@ echo "</pre>";
                 </div>
 
 
-                <?php include("graphique\graphiqueTypeDeRequete.php") ?>
 
 
         </section>
