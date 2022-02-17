@@ -157,8 +157,8 @@ echo "</pre>";
                     </div>
                 </div>
 
-                <div class="graph" style="display: flex;">
-                    <div class="graphBlock">
+                <div class="graph" style="display: flex;flex-wrap: wrap;">
+                    <div class="graphBlock" style="width: 300px;height: 300px;">
                         <label class="graphLabel">Le nombre de trames par type de requête</label>
                         <canvas id="typeDeRequete" width="240px" height="240px" class="canvas"></canvas>
                     </div>
