@@ -9,9 +9,10 @@
         <!-- CSS only -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+        <link rel="stylesheet" href="css/carou.css">
         <link rel="stylesheet" href="css/headerHConnex.css">
         <link rel="stylesheet" href="css/about.css">
+
 
     </head>
 
@@ -29,7 +30,7 @@
                     <div class="m-4 m-lg-5 "> <img class="img-home" src="imgs/blogging.png" alt="">
                         <h1 class="display-5 fw-bold">Qui somme-nous?</h1>
                         <p class="fs-4">Nous somme une entreprise spécialiser à gérer et analyser les trames réesaux avec une équipe toujours à votre disposition et à votre écoute pour d'eventuelle questions.</p>
-                        <a class="btn btn-primary btn-lg coord-qsn" href="#footer"> Nos Coordonnées</a>
+                        <a class="btn btn-primary btn-lg coord-qsn" id="coord-qsn" href="#!"> Nos Coordonnées</a>
                         <div class="qsn-coordonnées"><img src="../imgs/logo_Need_For_School.jpg" alt="" srcset=""> <img src="../imgs/logo.png" alt="" style="background-color: black;border-radius:50%; width:100px">
                             <p> <img src="imgs/location.png" alt=""> Need for School,Rouen 765000</p>
                             <div>
@@ -47,45 +48,13 @@
         <!-- Page Content-->
 
 
-        <section class="pt-4 " id="partenaires">
-            <div class="container px-lg-5">
-
-                <!-- Page Features-->
-                <div class="row gx-lg-5">
-                    <div class="col-lg-4 col-xl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
-                                <h2 class="fs-4 fw-bold"><a href="#" target="_blank"><img src="imgs/logo-QSN.jpg" alt=""></a></h2>
-                                <p class="mb-0">une entreprise spécialiser d'analyse du réseaux</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                                <h2 class="fs-4 fw-bold"><a href="https://www.needfor-school.com/" target="_blank"><img src="imgs/logo_Need_For_School.jpg" alt=""></a></h2>
-                                <p class="mb-0"> une école associative pour vous former aux métiers du numérique</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                                <h2 class="fs-4 fw-bold"><a href="https://www.pole-emploi.fr/accueil/" target="_blank"><img src="imgs/pole_emploi.png" alt=""></a></h2>
-                                <p class="mb-0">Un établissement public à caractère administratif (EPA), chargé de l'emploi en France</p>
-                            </div>
-                        </div>
-                    </div>
-
-        </section>
-        <!-----------map---------->
 
 
+        <!-----------carousel---------->
+
+        <?php include('carou.php') ?>
         <!--------------->
-        <section class="pt-4 section-devs" id="section-devs">
+        <section class="pt-2 section-devs" id="section-devs">
 
             <h2>Notre équipe :</h2>
             <div class="equipe-devs">
@@ -150,11 +119,13 @@
 
 
         <!-- End of contact section -->
-        <?php include('footer.php') ?>
+        <div id="footer">
+            <?php include('footer.php') ?></div>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="js/inscription.js"></script>
+        <script src="js/carou.js"></script>
         <script src="js/about.js"></script>
 
     </body>

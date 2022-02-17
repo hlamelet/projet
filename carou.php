@@ -8,64 +8,60 @@
 
 <body style="height: 2000px;">
 
-	<div class="slider">
-		<!-- fade css -->
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 1</h1>
-				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+
+	<!------------------------------------------------------------------------------------------------------->
+
+
+	<div class="container">
+		<div class="card-carousel">
+			<div class="card" id="1">
+				<a href="#" target="_blank">
+					<div class="image-container"></div>
+				</a>
+				<p>une entreprise spécialiser d'analyser et de gérer du réseaux</p>
+				<h4>
+					<=>
+				</h4>
 			</div>
-			<img src="img1.jpg" style="width: 100%; height: 100%;">
-		</div>
+			<div class="card" id="2">
 
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 2</h1>
-				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+				<div class="image-container"></div>
+
+				<p>Notre equipe ATH Réseau à votre écoute 24h/24h.</p>
+				<h4>
+					<=>
+				</h4>
 			</div>
-			<img src="img2.jpg" style="width: 100%; height: 100%;">
-		</div>
+			<div class="card" id="3">
 
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 3</h1>
-				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+				<div class="image-container"></div>
+
+				<p>une école associative pour vous former aux métiers du numérique</p>
+				<h4>
+					<=>
+				</h4>
 			</div>
-			<img src="img3.jpg" style="width: 100%; height: 100%;">
-		</div>
+			<div class="card" id="4">
 
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 4</h1>
-				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+				<div class="image-container"></div>
+
+				<p>Notre site vous permet de gérer toutes vos IP, et également de gérer les données de vos appareils</p>
+				<h4>
+					<=>
+				</h4>
 			</div>
-			<img src="img4.jpg" style="width: 100%; height: 100%;">
-		</div>
-
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 5</h1>
-				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			<div class="card" id="5">
+				<a href="about.php#footer">
+					<div class="image-container"></div>
+				</a>
+				<p>N'hesitez pas à basculer vers footer pour voir plus d'infos</p>
 			</div>
-			<img src="img5.jpg" style="width: 100%; height: 100%;">
-		</div>
-		<!-- /fade css -->
 
-		<!-- onclick js -->
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-		<div class="dotsbox" style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
-			<span class="dot" onclick="currentSlide(5)"></span>
 		</div>
-		<!-- /onclick js -->
+		<a href="#" class="visuallyhidden card-controller">Carousel controller</a>
 	</div>
 
-	<script src="jss/carou.js"></script>
+	<script src="js/carou.js"></script>
 </body>
 
 </html>
