@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 //transformation du tableau en plusieur string envoyé dans le chart.Js
 $jsonArray = array_count_values($jsonArray);
-print_r($jsonArray);
+
 foreach ($jsonArray as $key => $i) {
     if ($i != null) {
         $strArray[] = "'" . $key . "'";
@@ -21,6 +21,7 @@ foreach ($jsonArray as $key => $i) {
         $couleurArray[] = "'" . sprintf('#%06X', mt_rand(0, 0xFFFFFF)) . "'";
     }
 }
+$nbrTypeRequete = count($strArray);
 $labelsTypeDeRequete = implode(",", $strArray);
 $valeurTypeDeRequete = implode(",", $valueArray);
 $couleurTypeDeRequete = implode(",", $couleurArray);
@@ -31,7 +32,7 @@ foreach ($jsonTTL as $i) {
 }
 //statut protocole---------------------------------------
 $statutDuProtocole = array_count_values($statutDuProtocole);
-print_r($statutDuProtocole);
+
 
 
 foreach ($statutDuProtocole as $key => $i) {
@@ -63,18 +64,15 @@ $ValeurIpReception = implode(",", $ValeurIpReception);
 // $ipCouleur = [];
 // $ipCouleur += $ipEnvoi;
 // $ipCouleur += $ipReception;
+//------------------------------------------compte crées
+$query = "SELECT * FROM user WHERE 1";
+$result = mysqli_query($connection, $query);
+$comptecree = (string)mysqli_num_rows($result);
 
-echo "<pre>";
+// -------------------------------------------------debug
 
-print_r($ipEnvoi);
-print_r($ipReception);
-print_r($ipCouleur);
-print_r($labelsIpEnvoi);
-print_r($ValeurIpEnvoi);
-print_r($labelsIpReception);
-print_r($ValeurIpReception);
 $couleurStatut = "'#FF0000','#008000'";
-echo "</pre>";
+
 ?>
 
 <!-- -------------------------------type de requete -->

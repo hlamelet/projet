@@ -32,7 +32,8 @@ if (isset($_SESSION)) {
 
 
 
-    <?php include('header.php') ?>
+    <?php
+    include('header.php') ?>
 
     <!--------------------->
 
