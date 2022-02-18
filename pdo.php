@@ -1,5 +1,9 @@
 <?php
 session_start();
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 $pdo = new PDO('mysql:host=localhost;dbname=ath', "root", "root");
 
 define('DB_SERVER', 'localhost');
