@@ -20,7 +20,7 @@ if (!empty($_POST)) {
 		$user = $checkUser->fetch();
 
 		if (empty($user)) {
-
+			$password = password_hash("$password", PASSWORD_DEFAULT);
 			$RequestInsertUser = $pdo->prepare(
 				"INSERT INTO `user`(`nom`,`email`,`password`) 
                     VALUES ('$nom','$email' ,'$password')"
@@ -78,7 +78,7 @@ if (!empty($_POST)) {
 
 	</form>
 
-	
+
 
 </body>
 
