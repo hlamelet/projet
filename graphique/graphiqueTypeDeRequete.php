@@ -61,9 +61,7 @@ foreach ($ipReception as $key => $i) {
 $labelsIpReception = implode(",", $labelsIpReception);
 $ValeurIpReception = implode(",", $ValeurIpReception);
 // -----------------------------------choix des couleurs
-// $ipCouleur = [];
-// $ipCouleur += $ipEnvoi;
-// $ipCouleur += $ipReception;
+
 //------------------------------------------compte crées
 $query = "SELECT * FROM user WHERE 1";
 $result = mysqli_query($connection, $query);
