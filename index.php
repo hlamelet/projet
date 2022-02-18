@@ -1,6 +1,7 @@
 <?php
 include('pdo.php');
-if (isset($_SESSION)) {
+if (isset($_SESSION['nom'])) {
+    $nom = $_SESSION['nom'];
 }
 ?>
 
@@ -45,6 +46,7 @@ if (isset($_SESSION)) {
 
 
     <!--------popUp---------->
+
     <?php include('messages.php') ?>
     <!------fin popUp--------->
 

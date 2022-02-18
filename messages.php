@@ -50,7 +50,11 @@
         } else {
             $message_remplir = "<p>veuillez remplir le formulaire</p>";
         }
-
+        if (isset($badPassword)) {
+            if ($badPassword == true) {
+                echo "<span class='badPassword'>mauvais mot de passe</span>";
+            }
+        }
         ?>
     </div>
 </body>

@@ -21,6 +21,7 @@
         <ul class="links">
 
             <?php if (isset($_SESSION['email'])) {
+                echo "<span style='color:white;margin-right:18px;margin-top:10px'>bonjour " . $nom . "</span>";
                 echo "<li><a href='dashBoard.php'>Dashbord</a></li>";
             }
             ?>
