@@ -164,7 +164,14 @@ body {
   text-align: start;
   background-color: #e3f6f5;
 }
-
+.badPassword {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  color: red;
+  font-size: 1.8em;
+  font-weight: 700;
+}
 /*---------responsive--------------*/
 
 @media (max-width: 600px) {

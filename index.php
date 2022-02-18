@@ -46,6 +46,7 @@ if (isset($_SESSION['nom'])) {
 
 
     <!--------popUp---------->
+
     <?php include('messages.php') ?>
     <!------fin popUp--------->
 
