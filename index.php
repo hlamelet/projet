@@ -1,7 +1,6 @@
 <?php
 include('pdo.php');
 if (isset($_SESSION)) {
-    print_r($_SESSION);
 }
 ?>
 
