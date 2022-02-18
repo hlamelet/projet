@@ -18,7 +18,7 @@
 				<a href="#" target="_blank">
 					<div class="image-container"></div>
 				</a>
-				<p>une entreprise spécialiser d'analyser et de gérer du réseaux</p>
+				<p>une entreprise spécialisé dans l'analyse de réseaux</p>
 				<h4>
 					<=>
 				</h4>
