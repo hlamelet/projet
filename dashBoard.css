@@ -27,31 +27,40 @@ table {
 .even {
   background-color: #e3f6f5;
 } */
+
+
 /* ------------------------------------------------------------------------------------ */
 
 .graphBlock {
-  display: inline;
-  background-color: #272643;
-  margin-right: 30px;
-  border-radius: 10px;
-  padding: 10px 30px;
-  width: auto;
-  height: auto;
+    display: inline;
+    background-color: #272643;
+    margin-right: 30px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: auto;
+    height: auto;
 }
+
 .graph {
-  display: flex;
-  margin-top: 8px;
+    display: flex;
+    margin-top: 8px;
 }
+
 .canvas {
-  display: inline;
-  width: 200px;
-  height: 200px;
+    display: inline;
+    width: 200px;
+    height: 200px;
 }
+
 .graphLabel {
-  color: white;
-  font-family: Poppins, sans-serif;
-  margin-bottom: 5px;
+    color: white;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 5px;
 }
+
 section {
-  width: 80%;
+    width: 80%;
 }
+
+
+/*----------------*/

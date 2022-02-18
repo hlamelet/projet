@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
     <link rel="stylesheet" href="../css/index.css">
 
-=======
->>>>>>> Stashed changes
     <title>Document</title>
 </head>
 
@@ -23,11 +20,8 @@
             <div class="form-container sign-up-container">
 
                 <?php include("inscription.php") ?>
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes
             </div>
             <!-- partie gauche connexion --------------------------------------- -->
             <div class="form-container sign-in-container">
@@ -51,10 +45,7 @@
 
         </div>
     </div>
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
+
 </body>
 
 </html>

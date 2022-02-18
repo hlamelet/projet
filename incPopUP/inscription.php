@@ -20,11 +20,7 @@ if (!empty($_POST)) {
 		$user = $checkUser->fetch();
 
 		if (empty($user)) {
-<<<<<<< Updated upstream
 			$password = password_hash("$password", PASSWORD_DEFAULT);
-=======
-
->>>>>>> Stashed changes
 			$RequestInsertUser = $pdo->prepare(
 				"INSERT INTO `user`(`nom`,`email`,`password`) 
                     VALUES ('$nom','$email' ,'$password')"
@@ -42,7 +38,6 @@ if (!empty($_POST)) {
 	}
 }
 ?>
-<<<<<<< Updated upstream
 
 <!DOCTYPE html>
 <html lang="en">
@@ -88,13 +83,3 @@ if (!empty($_POST)) {
 </body>
 
 </html>
-=======
-<form action="#" method="post">
-
-	<h1>Créer un compte</h1>
-	<input type="text" name="nom" placeholder="nom" />
-	<input type="email" name="email" placeholder="email" />
-	<input type="password" name="password" placeholder="password" />
-	<button type="submit">Sign Up</button>
-</form>
->>>>>>> Stashed changes
