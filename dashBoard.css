@@ -40,7 +40,6 @@ table {
 }
 .graph {
   display: flex;
-  background-color: rgb(196, 196, 196);
   margin-top: 8px;
 }
 .canvas {
